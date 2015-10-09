@@ -3,23 +3,40 @@ phone = {
 
 	},
 
+	/**
+	 * Call help subsystem
+	 */
 	help : {
+		/**
+		 * Interval for call countdown
+		 */
 		interval: -1,
+
+		/**
+		 * Number of passed seconds
+		 */
 		count: 0,
 
-		mousedown: function(e){
+		/**
+		 * Handler for mousedown event - start
+		 */
+		mousedown: function(){
+			// Only first time
 			if(phone.help.interval == -1)
 			{
 				phone.help.count = -1;
 				phone.help.interval = setInterval(phone.help.tick, 1000);
 				phone.help.tick();
 			}
-
 		},
 
+		/**
+		 * Handler for mouseup - interrupted
+		 */
 		mouseup: function(){
 			if(phone.help.interval != -1)
 			{
+				// Only clicked
 				if(phone.help.count == 0)
 				{
 					alert('Stiskněte 3 vteřiny.')
@@ -30,6 +47,9 @@ phone = {
 			$("#countDown").hide();
 		},
 
+		/**
+		 * Tick each second
+		 */
 		tick: function(){
 			phone.help.init();
 			phone.help.count++;
@@ -41,6 +61,9 @@ phone = {
 			}
 		},
 
+		/**
+		 * Initialize countdown
+		 */
 		init: function(){
 			if($("#countDown").length == 0)
 			{
