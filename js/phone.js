@@ -1,0 +1,5 @@
+phone = {
+	open : function() {
+
+	}
+};
