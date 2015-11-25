@@ -15,6 +15,8 @@ $(document).ready(function(){
 	$("#menu_help").on('mouseout',phone.help.mouseup);
 	$("#menu_help").on('touchleave',phone.help.mouseup);
 	$("#menu_help").on('touchcancel',phone.help.mouseup);
+
+	calendar.notify();
 });
 
 (function($){

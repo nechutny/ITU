@@ -80,3 +80,32 @@ div.mainWeather span {
 	transform: translate(-50%, -50%);
 	width: 500px;
 }
+
+#notifyPill {
+	position: absolute;
+	top: 480px;
+	left: 5%;
+	width: 90%;
+	height: 220px;
+	border: 5px solid #d58512;
+	background: #ffffff;
+}
+
+#notifyPill img {
+	margin: 15px;
+}
+
+#notifyPill span {
+	position: relative; top: 15px;
+	padding: 24px;
+	font-size: 64px;
+}
+
+#notifyPill button
+{
+	position: relative; top: 55px;
+}
+
+.btn {
+	border-radius: 0;
+}
