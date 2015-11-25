@@ -8,30 +8,40 @@
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
 
 </head>
 <body>
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-3 menu-icon" id="menu_calendar">
+		<div class="col-md-5 menu-icon" id="menu_calendar">
 			<i class="glyphicon glyphicon-calendar"></i>
 			<span>Kalendář</span>
 		</div>
-		<div class="col-md-3 menu-icon" id="menu_pick">
-			<i class="glyphicon glyphicon-hand-up"></i>
+		<div class="col-md-5 menu-icon" id="menu_pick">
+			<i class="fa fa-arrows-v"></i>
 			<span>Zvednout předmět</span>
 		</div>
-		<div class="col-md-3 menu-icon" id="menu_phone">
+		<div class="col-md-5 menu-icon" id="menu_phone">
 			<i class="glyphicon glyphicon-earphone"></i>
 			<span>Telefon</span>
 		</div>
-		<div class="col-md-3 menu-icon" id="menu_help">
+
+		<div class="col-md-5 menu-icon" id="menu_help">
 			<i class="glyphicon glyphicon-alert"></i>
 			<span>Pomoc</span>
 		</div>
 
+		<div class="mainWeather col-md-12 col-xs-12">
+			<i class="fa fa-cloud weatherIcon"></i>
+			<span class="weatherTemp">17°C<br>Zataženo bez deště</span>
+		</div>
+
 	</div>
+
+
 </div>
 
 
@@ -41,6 +51,7 @@
 
 <script src="js/phone.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/lift.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

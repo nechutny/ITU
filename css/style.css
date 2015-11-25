@@ -1,3 +1,7 @@
+body {
+	background: #F0F0F0;
+}
+
 .container {
 	padding: 10px;
 }
@@ -5,10 +9,29 @@
 .menu-icon {
 	text-align: center;
 	padding: 30px;
+	padding-top: 45px;
+	margin: 15px;
+	width: 46%;
+	height: 200px;
+	vertical-align: middle;
+	border: 1px solid #000000;
+	background: #ffffff;
+	float: left;
 }
 .menu-icon i {
 	display: block;
 	font-size: 72px;
+}
+
+
+@media (max-width: 767px) {
+	.menu-icon
+	{
+		margin: 5px;
+		width: 42%;
+		float: left;
+		margin-left: 15px;
+	}
 }
 
 .menu-icon span {
@@ -23,8 +46,37 @@
 	transform: translate(-50%, -50%);
 	border: 1px solid #0f0f0f;
 	z-index: 100;
-	background: #999999;
+	background: #97c369;
 	padding: 50px;
 	font-size: 42px;
 }
 
+div.mainWeather
+{
+	padding: 50px;
+}
+
+div.mainWeather i.weatherIcon
+{
+	font-size: 180px;
+	float: left;
+}
+
+div.mainWeather span {
+	font-size: 40px;
+	/*float: right;*/
+	display:block;
+	padding: 15px;
+	position: relative;
+	left: 50px;
+}
+
+
+#liftProgress
+{
+	position: absolute;
+	top: 198px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+}

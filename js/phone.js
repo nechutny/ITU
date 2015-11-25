@@ -1,6 +1,15 @@
 phone = {
 	open : function() {
 
+		if($("#phoneWindow").length == 0)
+		{
+			phone.init();
+		}
+
+	},
+
+	init : function() {
+		$("body").append('');
 	},
 
 	/**
@@ -39,12 +48,21 @@ phone = {
 				// Only clicked
 				if(phone.help.count == 0)
 				{
-					alert('Stiskněte 3 vteřiny.')
+					if($("#countDown").css('display') != 'none')
+					{
+						$("#countDown").hide();
+						alert('Stiskněte 3 vteřiny.');
+					}
 				}
+				else
+				{
+					$("#countDown").hide();
+				}
+
 				clearInterval(phone.help.interval);
 				phone.help.interval = -1;
 			}
-			$("#countDown").hide();
+
 		},
 
 		/**
