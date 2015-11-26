@@ -17,6 +17,7 @@ body {
 	border: 1px solid #000000;
 	background: #ffffff;
 	float: left;
+	cursor: pointer;
 }
 .menu-icon i {
 	display: block;
@@ -84,10 +85,10 @@ div.mainWeather span {
 #notifyPill {
 	position: absolute;
 	top: 480px;
-	left: 5%;
-	width: 90%;
-	height: 220px;
-	border: 5px solid #d58512;
+	width: 95.4%;
+	margin: 15px;
+	height: 270px;
+	border: 5px solid #d50c0c;
 	background: #ffffff;
 }
 
@@ -103,13 +104,76 @@ div.mainWeather span {
 
 #notifyPill button
 {
-	position: relative; top: 55px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
 }
 
-.btn {
-	border-radius: 0;
+.btn, .thumbnail, input, textarea {
+	border-radius: 0 !important;
 }
 
-.thumbnail {
-	border-radius: 0;
+#phoneList {
+	position: absolute;
+	top: 15px;
+	left: 3%;
+	width: 94%;
+	height: 750px;
+	padding: 15px;
+
+	border: 3px solid #adadad;
+	background: #ffffff;
+
+}
+
+#phoneList span {
+	padding-left: 50px;
+	font-size: 32px;
+}
+
+#phoneListList {
+	overflow: scroll;
+	height: 670px;
+}
+
+#phoneListList div {
+	width: 100%;
+	height:130px;
+
+}
+
+#phoneListList div span {
+	font-size: 32px;
+	padding-left: 15px;
+}
+
+#phoneListList div .callButton {
+	width: 110px;
+	height: 110px;
+	font-size: 72px;
+}
+
+.calendarTitle {
+	font-size: 32px;
+	position: relative;
+	top: -8px;
+}
+
+#calendarCal table, #calendarCal table thead tr th {
+	font-size: 24px;
+	text-align: center;
+}
+
+.calPrefix {
+	color: #3c3c3c;
+}
+
+#calUpcomming ul li {
+	font-size: 22px;
+}
+
+.pills {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
 }

@@ -1,15 +1,65 @@
 phone = {
 	open : function() {
 
-		if($("#phoneWindow").length == 0)
+		if($("#phoneList").length == 0)
 		{
 			phone.init();
 		}
 
+		phone.render();
+	},
+
+	render: function()
+	{
+		data = {
+			0 : {
+				'name' : "Lena",
+				'icon' : 'lena_color.gif',
+			},
+			1 : {
+				'name' : "Péťa",
+				'icon' : 'person-placeholder.jpg',
+			},
+			2 : {
+				'name' : "Pepa",
+				'icon' : 'house.png',
+			},
+			3 : {
+				'name' : "Gastroenterologie",
+				'icon' : 'person-placeholder.jpg',
+			},
+			4 : {
+				'name' : "Kája Novák",
+				'icon' : 'person-placeholder.jpg',
+			},
+			5 : {
+				'name' : "Ondřej",
+				'icon' : 'person-placeholder.jpg',
+			},
+			6 : {
+				'name' : "Klára",
+				'icon' : 'person-placeholder.jpg',
+			}
+		};
+
+		result = "";
+
+		for(var i = 0; i < Object.keys(data).length; i++)
+		{
+			result += "<div> <img src='img/"+data[i]['icon']+"' height='120' align='left' class='thumbnail'> <span>"+data[i]['name']+"</span><a href='#' class='btn btn-success pull-right callButton' onclick='alert(\"Volám přes Skype\")'><i class='fa fa-phone'></i></a></div><hr>";
+		}
+
+		$("#phoneListList").html(result);
 	},
 
 	init : function() {
-		$("body").append('');
+		$("body").append('<div id="phoneList"><a href="#" class="btn btn-danger pull-left" onclick="phone.close()">Zavřít</a> <span class="text-center">Kontakty</span> <a class="pull-right btn btn-primary" onclick="alert(\'Dojde k otevření Skype\')">Přidat</a><div id="phoneListList"></div></div>');
+
+	},
+
+	close: function() {
+		console.log(1);
+		$("#phoneList").remove();
 	},
 
 	/**
